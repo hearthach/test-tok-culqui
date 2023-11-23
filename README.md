@@ -79,8 +79,4 @@ Menciona las tecnologías, frameworks y herramientas que utilizaste para tu proy
 
 Este proyecto está licenciado bajo la Licencia XYZ - ver el archivo LICENSE.md para detalles.
 
-## Agradecimientos
-
-- Menciona a cualquier persona o recurso que haya ayudado.
-
 
