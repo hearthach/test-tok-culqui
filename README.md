@@ -64,7 +64,25 @@ npm jest
 
 ## Despliegue
 
-Notas adicionales sobre cómo desplegar esto en un sistema en vivo.
+Se debe tener en cuenta la BASE DE DATOS, adjunto el srcipt para MYSQL:
+
+CREATE DATABASE IF NOT EXISTS nombre_de_la_BD;
+
+USE nombre_de_la_BD;
+
+CREATE TABLE IF NOT EXISTS card_tokens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    card_number VARCHAR(255) NOT NULL,
+    cvv VARCHAR(255),
+    expiration_month VARCHAR(2),
+    expiration_year VARCHAR(4),
+    cardholder_name VARCHAR(255),
+    email VARCHAR(255),
+    token VARCHAR(255) UNIQUE NOT NULL,
+    iv VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ## Construido Con
 
